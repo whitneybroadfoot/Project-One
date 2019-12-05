@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Happy Puppy News</title>
+        <link rel="stylesheet" href="bulma.css" /> <!--Bulma CSS-->
+    </head>
+    <body>
+        <h1>This is our app</h1>
+
+        <div class="columns is-mobile is-multiline articleSection">
+
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        var articleArray = []; 
+        var firstNum = Math.floor(Math.random() * 20);
+        var newNum;
+        articleArray.push(firstNum);
+        for(var i = 0; i < 5; i++){
+            newNum = Math.floor(Math.random() * 20);
+        while (articleArray.lastIndexOf(newNum) !== -1) {
+            newNum = Math.floor(Math.random() * 20);
+        }
+        articleArray.push(newNum);
+        }
+        console.log(articleArray);
+    </script>
+
+       
+    </body>
+</html>
