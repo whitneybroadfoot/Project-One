@@ -5,11 +5,41 @@
         <link rel="stylesheet" href="bulma.css" /> <!--Bulma CSS-->
     </head>
     <body>
-        <h1>This is our app</h1>
+        <!-- This section is the header -->
+        <section class="hero is-primary">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                  Happy Tales News and Media
+                </h1>
+                <h2 class="subtitle">
+                  Your #1 source for canine related news and photos!
+                </h2>
+              </div>
+            </div>
+        </section>
 
-        <div class="columns is-mobile is-multiline articleSection">
-
+        <!-- This outer div is the container for the two colums  -->
+        <div class="columns">
+            <!-- this is the colum for the news api info -->
+            <div class="column is-mobile is-multiline articleSection "></div>
+            <!-- this is the colum for the dog api info -->
+            <div class="column">This is where the 2nd api info goes</div>
         </div>
+
+        <!-- this section is the footer of the page  -->
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                </p>
+            </div>
+        </footer>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
