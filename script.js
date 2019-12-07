@@ -23,24 +23,34 @@ $.ajax({
     console.log(articleArray);
 
     for(var i = 0; i < 6; i++){
-        //create a tile with the image from each article and the article title and display on the page
+        //create a tile with the image from each article and the article title, date, and description and display on the page
        
-        // creates 3 divs with class columns for formatting 
+        // creates 4 divs with class columns for formatting 
 
+        //article photo div
         var photoDiv = $("<div>");
         photoDiv.attr("class", "columns");
         photoDiv.attr("id", "photo");
         
+        //article title div
         var titleDiv = $("<div>");
         titleDiv.attr("class", "columns");
         titleDiv.attr("id", "title");
         titleDiv.attr("style", "margin-left: 0px");
+
+        //article date div
+        var dateDiv = $("<div>");
+        dateDiv.attr("class", "columns");
+        dateDiv.attr("id", "date");
+        dateDiv.attr("style", "margin-left: 0px");
         
+        //article description div
         var desDiv = $("<div>");
         desDiv.attr("class", "columns");
         desDiv.attr("id", "desDiv");
         desDiv.attr("style", "margin-left: 0px");
 
+        //article URL
         var urlLink = $('<a>');
         console.log("Article URL: " + response.articles[articleArray[i]].url);
         var articleURL = response.articles[articleArray[i]].url;
@@ -48,8 +58,6 @@ $.ajax({
 
 
         var articleImage = $('<img>');
-        
-        
         
     
         console.log("Article Image URL: " + response.articles[articleArray[i]].urlToImage);
@@ -67,6 +75,23 @@ $.ajax({
         titleBox.text(articleTitle);
         titleDiv.append(titleBox);
 
+        var dateBox = $('<p>');
+        dateBox.attr("style", "font-style: italic");
+        var articleDate = response.articles[articleArray[i]].publishedAt;
+        console.log("Article Date: " + articleDate);
+        articleDate = articleDate.split('T')[0];
+        console.log("Shortened Date: " + articleDate);
+        var year = articleDate.substr(0,4);
+        console.log("Year: " + year);
+        var month = articleDate.substr(5,2);
+        console.log("Month: " + month);
+        var day = articleDate.substr(8,2);
+        console.log("Day: " + day);
+        var date = spacetime([year, month, day]);
+        console.log("Formatted Date: " + date.format('{month} {date-pad}, {year}'));
+        dateBox.text(date.format('{month} {date-pad}, {year}'));
+        dateDiv.append(dateBox);
+
         var descriptionBox = $('<p>');
         var description = response.articles[articleArray[i]].description;
 
@@ -76,6 +101,7 @@ $.ajax({
         // appends the three columns to html
         $(".articleSection").append(photoDiv);
         $(".articleSection").append(titleDiv);
+        $(".articleSection").append(dateDiv);
         $(".articleSection").append(desDiv);
     }
    
