@@ -91,11 +91,17 @@ $.ajax({
 })
 .then(function(response) {
     var message = response.message;  
+    console.log(message);
     var selectBox = $(".select-box"); 
     //Populate the Breed List in the drop down
+    var breedArray = [];
+    var count = 0;
     for (var key in message) {
+        breedArray[count] = key;
+        count ++;
         $('<option />', {value: key, text: key}).appendTo(selectBox);
     }    
+    console.log(breedArray);
     
 });
 
