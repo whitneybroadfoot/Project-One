@@ -80,3 +80,48 @@ $.ajax({
     }
    
 });
+
+
+//API call to get the breed list
+var dogBreedListUrl = "https://dog.ceo/api/breeds/list/all";
+
+$.ajax({
+    url: dogBreedListUrl,
+    method: "GET"
+})
+.then(function(response) {
+    var message = response.message;  
+    var selectBox = $(".select-box"); 
+    //Populate the Breed List in the drop down
+    for (var key in message) {
+        $('<option />', {value: key, text: key}).appendTo(selectBox);
+    }    
+    
+});
+
+
+//On Selecting a Breed Make the Second API Call
+$("select").change(function(event){
+    var breedImage = $('.breed-image');
+    breedImage.empty();
+    var selectedBreed = event.target.value;
+    console.log(selectedBreed);
+    //API Call
+    var dogImageUrl = "https://dog.ceo/api/breed/" + selectedBreed + "/images/random";
+    getImage(dogImageUrl);
+  });
+
+  //Get the Image from the response and display on the page
+  function getImage(dogImageUrl){
+    $.ajax({
+        url: dogImageUrl,
+        method: "GET"
+    })
+    .then(function(response) {
+        var image = response.message;
+        var breedImage = $('.breed-image');
+        breedImage.attr("src", image);
+        breedImage.attr("style", "width: 400px");
+        $(".dropDownImageSection").append(breedImage);        
+    });
+  }
