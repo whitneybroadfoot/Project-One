@@ -7,7 +7,10 @@
         <!-- google fonts link -->
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Pacifico&display=swap" rel="stylesheet">
         <!-- font awesome icons  -->
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> 
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+
+
     </head>
     <body>
         <!-- This section is the header -->
@@ -34,9 +37,8 @@
                <!-- This div is for the Drop Down Image Section  -->
               <div class="control is-expanded dropDownImageSection">
                 <div class="select is-fullwidth dropDown">
-                  <select class="select-box">
-                    <option>Select Breed</option>
-                  </select>
+                  <label for="Breed">Type your favorite Breed for a picture</label>
+                  <input id="Breeds">
                 </div>
               </div>
               <img class="breed-image"/>
@@ -72,6 +74,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/spacetime"></script>
     <script src="script.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script> 
        
     </body>
 </html>
