@@ -28,17 +28,19 @@ $.ajax({
         // creates 3 divs with class columns for formatting 
 
         var photoDiv = $("<div>");
-        photoDiv.attr("class", "columns")
-        photoDiv.attr("id", "photo")
+        photoDiv.attr("class", "columns");
+        photoDiv.attr("id", "photo");
         
         var titleDiv = $("<div>");
         titleDiv.attr("class", "columns");
         titleDiv.attr("id", "title");
+        titleDiv.attr("style", "margin-left: 0px");
         
         var desDiv = $("<div>");
-        desDiv.attr("class", "columns")
-        desDiv.attr("id", "desDiv")
-    
+        desDiv.attr("class", "columns");
+        desDiv.attr("id", "desDiv");
+        desDiv.attr("style", "margin-left: 0px");
+
         var urlLink = $('<a>');
         console.log("Article URL: " + response.articles[articleArray[i]].url);
         var articleURL = response.articles[articleArray[i]].url;
