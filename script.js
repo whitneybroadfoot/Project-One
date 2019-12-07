@@ -118,30 +118,21 @@ $.ajax({
 .then(function(response) {
     var message = response.message;  
     console.log(message);
-    var selectBox = $(".select-box"); 
+    //var selectBox = $(".select-box"); 
     //Populate the Breed List in the drop down
     var breedArray = [];
     var count = 0;
     for (var key in message) {
         breedArray[count] = key;
         count ++;
-        $('<option />', {value: key, text: key}).appendTo(selectBox);
+       // $('<option />', {value: key, text: key}).appendTo(selectBox);
     }    
     console.log(breedArray);
-    
+    autopopulateBreed(breedArray);
 });
 
 
-//On Selecting a Breed Make the Second API Call
-$("select").change(function(event){
-    var breedImage = $('.breed-image');
-    breedImage.empty();
-    var selectedBreed = event.target.value;
-    console.log(selectedBreed);
-    //API Call
-    var dogImageUrl = "https://dog.ceo/api/breed/" + selectedBreed + "/images/random";
-    getImage(dogImageUrl);
-  });
+
 
   //Get the Image from the response and display on the page
   function getImage(dogImageUrl){
@@ -153,7 +144,29 @@ $("select").change(function(event){
         var image = response.message;
         var breedImage = $('.breed-image');
         breedImage.attr("src", image);
-        breedImage.attr("style", "width: 400px");
+        breedImage.attr("style", "width: 500px");
         $(".dropDownImageSection").append(breedImage);        
     });
+  }
+
+
+  function autopopulateBreed(breedArray){
+    $( "#Breeds" ).autocomplete({
+        source: breedArray,
+        focus: function(event, ui) {
+			event.preventDefault();
+			// manually update the textbox
+			$(this).val(ui.item.label);
+		},
+		select: function(event, ui) {
+			event.preventDefault();
+            var breedImage = $('.breed-image');
+            breedImage.empty();
+            var selectedBreed = $("#Breeds").val();
+            console.log("selectedBreed: " + selectedBreed);
+            //API Call to get Dog Image
+            var dogImageUrl = "https://dog.ceo/api/breed/" + selectedBreed + "/images/random";
+            getImage(dogImageUrl);
+		}
+     });
   }
