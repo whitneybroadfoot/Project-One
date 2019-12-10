@@ -88,8 +88,13 @@ $.ajax({
         var day = articleDate.substr(8,2);
         console.log("Day: " + day);
         var date = spacetime([year, month, day]);
-        console.log("Formatted Date: " + date.format('{month} {date-pad}, {year}'));
-        dateBox.text(date.format('{month} {date-pad}, {year}'));
+        console.log("Month spacetime: " + date.month());
+        console.log("Formatted Date: " + articleMonth);  
+        //spacetime month and month-short display the wrong month, while the month-number is correct
+        //created array to show correct month without using spacetime
+        var monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var articleMonth = monthArray[month-1];
+        dateBox.text(articleMonth + date.format(' {date-pad}, {year}'));
         dateDiv.append(dateBox);
 
         var descriptionBox = $('<p>');
