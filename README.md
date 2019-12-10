@@ -2,7 +2,7 @@
 
 ![happy image of dog](https://user-images.githubusercontent.com/55456375/70285391-915af280-1784-11ea-8785-263822583547.png)
 
-# Our user is someone who loves to be up to date on canine news and adoption.
+# Our user is someone who needs a happy break in their day - visit, etc. 
 This application puts K9 info all in one place which creates a time saving experience for the user, as well as brings awareness to dogs needing homes.
 
 Attention to detail include these conditions of satisfaction:
