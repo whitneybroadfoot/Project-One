@@ -145,6 +145,7 @@ $.ajax({
         var breedImage = $('.breed-image');
         breedImage.attr("src", image);
         breedImage.attr("style", "width: 500px");
+        $(".dropDownImageSection").attr("style", "text-align: center");
         $(".dropDownImageSection").append(breedImage);        
     });
   }
@@ -206,6 +207,6 @@ $.ajax({
  bulmaCarousel.attach('#carousel-demo', {
 			slidesToScroll: 1,
             slidesToShow: 1,
-            infinite: true
+            infinite: true,
         });
         
