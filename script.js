@@ -203,7 +203,7 @@ $.ajax({
   
  for (var i = 0; i < quoteArray.length; i++){
     var newDiv = $('<div>');
-    newDiv.attr("style", "margin-left: 50px; margin-right: 50px; padding-bottom: 25px; text-align: center; height: 150px");
+    newDiv.attr("style", "margin-left: 50px; margin-right: 50px; padding-bottom: 25px; text-align: center; height: 220px");
     newDiv.text(quoteArray[i]);
     console.log("Quote: " + quoteArray[i]);
     $('.carousel').append(newDiv);
