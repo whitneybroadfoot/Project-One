@@ -24,13 +24,6 @@
                 </h1>
               </div>
             </div>
-          <!--quote carousel-->
-            <section class="section">
-              <div class="container">
-                <div id="carousel-demo" class="carousel is-size-4">                         
-                </div>
-              </div>
-            </section>
         </section>
 
 
@@ -38,21 +31,27 @@
         <!-- This outer div is the container for the two columns  -->
         <div class="columns is-family-primary">
             <!-- this is the colum for the news api info -->
-            <div class="column box is-mobile is-multiline articleSection has-text-grey-dark">
+            <div class="column box is-mobile is-multiline articleSection is-5" style="min-height: 500px;">
               <!-- this is where articles go -->
             </div>
-            <div class="column box">
+            <div class="column box" style="overflow: auto;">
               <div class="box">
-               <!-- This div is for the Drop Down Image Section  -->
-              <div class="is-expanded dropDownImageSection">
-                <div class="is-fullwidth dropDown">
-                  <h2 id="breedLabel" class="has-text-grey is-size-3">TYPE A BREED NAME HERE TO GET A PHOTO!</h2>
-                  
-                  <input class="input is-rounded has-background-primary has-text-white" id="Breeds">
+                <!-- This div is for the Drop Down Image Section  -->
+                <div class="is-expanded dropDownImageSection">
+                  <div class="is-fullwidth dropDown">
+                    <label for="Breed">Type your favorite Breed for a picture</label>
+                    <input class="input is-rounded" id="Breeds">
+                  </div>
                 </div>
+                <img class="breed-image"/>
               </div>
-              <img class="breed-image"/>
-              </div>
+              <!-- Quote Carousel using Bulma -->
+              <section class="section">
+                <div class="container outer-carousel">
+                  <div id="carousel-demo" class="carousel">                         
+                  </div>
+                </div>
+              </section>
               <div class="box list of useful websites">
               <!--adding basic content to the webpage, other resources for our reader-->
                       
