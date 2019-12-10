@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="bulma.css" /> <!--Bulma CSS-->
         <link rel="stylesheet" href="style.css" /> <!--Additional Stylesheet-->
         <!-- google fonts link -->
-        <link href="https://fonts.googleapis.com/css?family=Pacifico|Sriracha&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lilita+One|Pacifico|Sriracha&display=swap" rel="stylesheet">
         <!-- font awesome icons  -->
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
         <!--bulma carousel-->        
@@ -38,7 +38,7 @@
         <!-- This outer div is the container for the two columns  -->
         <div class="columns is-family-primary">
             <!-- this is the colum for the news api info -->
-            <div class="column box is-mobile is-multiline articleSection">
+            <div class="column box is-mobile is-multiline articleSection has-text-grey-dark">
               <!-- this is where articles go -->
             </div>
             <div class="column box">
@@ -46,8 +46,9 @@
                <!-- This div is for the Drop Down Image Section  -->
               <div class="is-expanded dropDownImageSection">
                 <div class="is-fullwidth dropDown">
-                  <label for="Breed">Type your favorite Breed for a picture</label>
-                  <input class="input is-rounded" id="Breeds">
+                  <h2 id="breedLabel" class="has-text-grey is-size-3">TYPE A BREED NAME HERE TO GET A PHOTO!</h2>
+                  
+                  <input class="input is-rounded has-background-primary has-text-white" id="Breeds">
                 </div>
               </div>
               <img class="breed-image"/>
