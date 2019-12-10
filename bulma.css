@@ -2961,7 +2961,7 @@ fieldset[disabled] .button {
 .container {
   flex-grow: 1;
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
   width: auto;
 }
 
@@ -10829,4 +10829,6 @@ label.panel-block:hover {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
 }
+
+
 /*# sourceMappingURL=bulma.css.map */
