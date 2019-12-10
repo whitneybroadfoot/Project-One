@@ -8,12 +8,12 @@ $.ajax({
 .then(function(response) {
     console.log(response);
 
-    //generates 6 unique random articles each time the app is run
+    //generates 4 unique random articles each time the app is run
     var articleArray = []; 
     var firstNum = Math.floor(Math.random() * 20);
     var newNum;
     articleArray.push(firstNum);
-    for(var i = 0; i < 5; i++){
+    for(var i = 0; i < 3; i++){
         newNum = Math.floor(Math.random() * 20);
     while (articleArray.lastIndexOf(newNum) !== -1) {
         newNum = Math.floor(Math.random() * 20);
@@ -22,7 +22,7 @@ $.ajax({
     }
     console.log(articleArray);
 
-    for(var i = 0; i < 6; i++){
+    for(var i = 0; i < 4; i++){
         //create a tile with the image from each article and the article title, date, and description and display on the page
        
         // creates 4 divs with class columns for formatting 
