@@ -170,3 +170,42 @@ $.ajax({
 		}
      });
   }
+
+  //creates a carousel of 20 quotes about dogs
+  var quoteArray = ['"Outside of a dog, a book is a man\'s best friend. Inside of a dog it\'s too dark to read." - Groucho Marx', 
+  '"A dog is the only thing on earth that loves you more than you love yourself." - Josh Billings', 
+  '"Happiness is a warm puppy." - Charles Shultz',
+  '"Dogs have a way of finding the people who need them, and filling an emptiness we didn\'t ever know we had." - Thom Jones',
+  '"The average dog is a nicer person than the average person." - Andy Rooney',
+  '"There is no psychiatrist in the world like a puppy licking your face." - Ben Williams',
+  '"A dog will teach you unconditional love. If you can have that in your life, things won\'t be too bad." - Robert Wagner',  
+  '"There\'s just something about dogs that makes you feel good. You come home, they\'re thrilled to see you. They\'re good for the ego." - Janet Schnellman',
+  '"A person can learn a lot from a dog, even a loopy one like ours. Marley taught me about living each day with unbridled exuberance and joy, about seizing the moment and following your heart. He taught me to appreciate the simple things-a walk in the woods, a fresh snowfall, a nap in a shaft of winter sunlight. And as he grew old and achy, he taught me about optimism in the face of adversity. Mostly, he taught me about friendship and selflessness and, above all else, unwavering loyalty." - John Grogan',
+  '"Dogs are not our whole life, but they make our lives whole." - Roger Caras',
+  '"Dogs do speak, but only to those who know how to listen." - Orhan Pamuk',
+  '"The greatest pleasure of a dog is that you may make a fool of yourself with him, and not only will he not scold you, but he will make a fool of himself, too." - Samuel Butler',
+  '"I like dogs. You always know what a dog is thinking. It has four moods. Happy, sad, cross and concentrating. Also, dogs are faithful and they do not tell lies because they cannot talk." - Mark Haddon',
+  '"The better I get to know men, the more I find myself loving dogs." - Charles de Gaulle',
+  '"Dogs are better than human beings because they know but do not tell." - Emily Dickinson',
+  '"A dog can\'t think that much about what he\'s doing, he just does what feels right." - Barbara Kingsolver',
+  '"If you think dogs can\'t count, try putting three dog biscuits in your pocket and then give him only two of them." - Phil Pastoret',
+  '"You think dogs will not be in heaven? I tell you, they will be there long before any of us." - Robert Louis Stevenson',
+  'I\'m suspicious of people who don\'t like dogs, but I trust a dog when it doesn\'t like a person." - Bill Murray',
+  'It\'s hard not to immediately fall in love with a dog who has a good sense of humor." - Kate DiCamillo'];
+
+  
+  
+ for (var i = 0; i < quoteArray.length; i++){
+    var newDiv = $('<div>');
+    newDiv.attr("style", "margin-left: 50px; margin-right: 50px; padding-bottom: 25px; text-align: center");
+    newDiv.text(quoteArray[i]);
+    console.log("Quote: " + quoteArray[i]);
+    $('.carousel').append(newDiv);
+ }
+    
+ bulmaCarousel.attach('#carousel-demo', {
+			slidesToScroll: 1,
+            slidesToShow: 1,
+            infinite: true
+        });
+        
