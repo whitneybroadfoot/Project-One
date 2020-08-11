@@ -1,5 +1,3 @@
-# Welcome to Our Application!
-
 ![happy image of dog](https://user-images.githubusercontent.com/55456375/70285391-915af280-1784-11ea-8785-263822583547.png)
 
 # As a dog lover I want to visit one resource for relevant news and helpful links.
